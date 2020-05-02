@@ -26,9 +26,12 @@ class App extends React.Component {
     </div>)
   }
 }
-
-ReactDOM.render(<App />, 
+const routing = (
   <Router>
-    <Route path = "/home" component = {Home} />
-  </Router>,
-  document.getElementById('app'));
+    <div>
+      <Route path="/" component={App} />
+      <Route path="/home" component={Home} />
+    </div>
+  </Router>
+)
+ReactDOM.render( routing, document.getElementById('app'));
