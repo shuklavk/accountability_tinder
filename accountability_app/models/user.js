@@ -8,11 +8,13 @@ A brief description of Schema:
 - email : string & unique &required
 */
 const mongoose = require("mongoose");
+const FORTESTING = false;
 
 const userSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: true
+        required: true,
+        unique: FORTESTING
     },
     password: {
         type: String,
@@ -22,22 +24,20 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: false
     },
+    goals: {
+        type: Array,
+        required: false
+    },
     time_zone: {
         type: String,
         required: true
     },
     email: {
         type: String,
-        required: true
+        required: true,
+        unique: FORTESTING
     }
 });
 
 
-const User = mongoose.model("user", userSchema);
-
-var fluffy = new User({username:'user1', password: 'pass1', description:'boii', time_zone:'time1', email:'a@b.com'});
-
-fluffy.save(function (err, fluffy) {
-    if (err) return console.error(err);
-    console.log('saved! ', fluffy);
-  });
+mongoose.model('User', userSchema);
