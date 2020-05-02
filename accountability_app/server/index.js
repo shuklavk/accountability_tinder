@@ -5,6 +5,7 @@ const schema = require('./schema/schema');
 var app = express();
 const mongoose = require('mongoose');
 const {MONGOURI} = require('./keys');
+const passport = require('./google-auth');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGOURI);
@@ -35,6 +36,16 @@ app.use('/graphql', expressGraphQL({
   schema,
   graphiql: true
 }));
+
+// GET /auth/google
+app.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
+
+// GET /auth/google/callback
+app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login' }), 
+  function(req, res) {
+    res.redirect('/');
+});
+
 app.listen(3000, function() {
   console.log('listening on port 3000!');
 });
