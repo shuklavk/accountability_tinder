@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { 
+  BrowserRouter as Router, 
+  Route,
+} from 'react-router-dom'; 
 import $ from 'jquery';
 import List from './components/List.jsx';
-import Home from './components/home';
+import Home from './components/home/index.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -24,9 +28,7 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, 
-  (
-    <Router history = {browserHistory}>
-      <Route path = "home" component = {Home} />
-    </Router>
- ),
+  <Router>
+    <Route path = "/home" component = {Home} />
+  </Router>,
   document.getElementById('app'));

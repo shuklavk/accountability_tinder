@@ -8,9 +8,9 @@ class Home extends Component {
   } 
     render() {
         return (
-          <div className="App">
+         
             <div>Hello!</div>
-          </div>
+          
             
         );
     }
