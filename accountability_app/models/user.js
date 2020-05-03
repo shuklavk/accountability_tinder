@@ -18,10 +18,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    goals: {
-        type: Array,
-        required: false
-    },
     description: {
         type: String,
         required: false
@@ -36,4 +32,12 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-mongoose.model("User", userSchema);
+
+const User = mongoose.model("user", userSchema);
+
+var fluffy = new User({username:'user1', password: 'pass1', description:'boii', time_zone:'time1', email:'a@b.com'});
+
+fluffy.save(function (err, fluffy) {
+    if (err) return console.error(err);
+    console.log('saved! ', fluffy);
+  });
