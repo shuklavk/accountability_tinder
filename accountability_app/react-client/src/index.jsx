@@ -7,6 +7,7 @@ import {
 import $ from 'jquery';
 import List from './components/List.jsx';
 import Home from './components/home/index.js'
+import Login from './components/login/index.js'
 
 class App extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class App extends React.Component {
 const routing = (
   <Router>
     <div>
-      <Route path="/" component={Home} />
+      <Route path="/" component={Login} />
       <Route path="/home" component={Home} />
     </div>
   </Router>
