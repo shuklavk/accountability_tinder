@@ -1,0 +1,124 @@
+@import url(https://use.typekit.net/sxg7zok.css);
+
+:root {
+  --light: #fcf9ec;
+  --paleGreen: #b0f4e6;
+  --medGreen: #67eaca;
+  --darkGreen: #12d3cf;
+  --dark: #141021;
+  --gray: #999;
+}
+
+html, body {
+  width: 100% !important;
+  height: 70% !important;
+  margin-top: 100px;
+  background-color: var(--light);
+  color: var(--dark);
+  --antd-wave-shadow-color: var(--medGreen);
+}
+
+.Registration {
+  margin: 20px 10vw 100px 10vw;
+  position: relative;
+  font-family: 'Montserrat';
+  display: block;
+  padding: 0;
+}
+
+.Header {
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  top: 0;
+  background-color: var(--darkGreen);
+  position: fixed;
+  z-index: 99;
+  color: var(--dark);
+  font-family: 'Quasimoda';
+  display: block;
+}
+
+.Profile {
+  margin: 80px 10vw 100px 10vw;
+  position: relative;
+  align-items: center;
+  font-family: 'Montserrat';
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark);
+  font-family: 'Quasimoda';
+}
+
+p {
+  font-family: 'Montserrat';
+}
+
+a {
+  color: var(--medGreen);
+}
+
+a:hover, a:active {
+  color: var(--darkGreen);
+}
+
+.ant-form-horizontal {
+  padding: 3vh 0 3vh 0;
+  align-content: right;
+  align-items: right;
+  position: relative;
+}
+
+.ant-btn-primary {
+  position: absolute;
+  right: 0;
+  background-color: var(--darkGreen);
+  border-color: var(--darkGreen);
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  background-color: var(--paleGreen);
+  border-color: var(--paleGreen);
+}
+
+.ant-form-item-label {
+  width: 125px;
+}
+
+.site-custom-tab-bar {
+  z-index: 1;
+}
+
+.ant-tabs-nav {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.ant-tabs {
+  color: var(--dark);
+  line-height: 2;
+}
+
+.ant-tabs-tab:active, .ant-tabs-tab-active {
+  text-decoration-color: var(--darkGreen);
+  font-weight: 600;
+}
+
+::selection {
+  color: var(--light);
+  background: var(--darkGreen) !important;
+}
+
+.ant-page-header-heading-title {
+  color: var(--dark);
+  font-weight: 200;
+  font-size: 32px;
+  font-family: 'Quasimoda';
+}
+
+.ant-page-header-heading-sub-title {
+  color: var(--dark);
+  font-size: 16px;
+  font-family: 'Quasimoda';
+}
