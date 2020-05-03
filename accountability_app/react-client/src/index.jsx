@@ -29,7 +29,7 @@ class App extends React.Component {
 const routing = (
   <Router>
     <div>
-      <Route path="/" component={App} />
+      <Route path="/" component={Home} />
       <Route path="/home" component={Home} />
     </div>
   </Router>
