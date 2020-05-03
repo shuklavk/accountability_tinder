@@ -1,4 +1,4 @@
-# accountability_tinder
+# AccounTwin
 
 ## Inspiration
 COVID-19 has held us hostage in our own homes. However, it is also an opportunity to reflect upon ourselves, finally master that skill you've always wanted to, read that book you've been ignoring on your bookshelf, watch that movie you never got the chance to watch. Staying productive isn't as easy as it sounds though. Sometimes all you need is that ounce of motivation. AccounTwin presents you the opportunity to grab it!
