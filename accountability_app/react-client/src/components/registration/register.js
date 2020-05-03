@@ -5,8 +5,8 @@ import './../../css/App.css';
 import Logo from '../../../dist/assets/logo.png';
 
 const validateMessages = {
-    required: `{label} is required!`,
-    types: { email: `{input} is not a valid email!`}
+    required: `This input is required!`,
+    types: { email: `This is not a valid email!`}
 };
 
 class Registration extends Component {
@@ -20,7 +20,7 @@ class Registration extends Component {
         render() {
             return (
                 <div>
-                    <div><img src={Logo} alt="logo" width="25%"/></div>
+                    <div><img src={Logo} alt="logo" width="35%"/></div>
                     <Form name="nest-messages" onFinish={this.onFinish} validateMessages={validateMessages}>
                         <Form.Item
                             name={['user', 'name']}
@@ -75,11 +75,11 @@ class Registration extends Component {
                                 <Option value="IST">IST</Option>
                             </Select>
                         </Form.Item>
-                        <Button type="primary" htmlType="submit">
-                            Submit
-                        </Button>
                         <Button type="primary" htmlType="reset">
                             Cancel
+                        </Button>
+                        <Button type="primary" htmlType="submit">
+                            Submit
                         </Button>
                     </Form>
                 </div>

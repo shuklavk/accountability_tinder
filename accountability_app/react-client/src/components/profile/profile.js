@@ -11,7 +11,7 @@ class Profile extends React.Component {
         return (
             <div>
                 <div><img src={Logo} alt="logo" width="25%"/></div>
-                <Tabs defaultActiveKey="1" onChange={callback}>
+                <Tabs defaultActiveKey="1">
                     <TabPane tab="Profile" key="1">
                         <h2>Name</h2>
                         <h2>Username</h2>

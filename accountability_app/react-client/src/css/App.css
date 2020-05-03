@@ -19,7 +19,7 @@ html, body {
 }
 
 .Registration {
-  margin: 20px 10vw 100px 10vw;
+  margin: 20px 30vw 100px 30vw;
   position: relative;
   font-family: 'Montserrat';
   display: block;
@@ -71,10 +71,10 @@ a:hover, a:active {
 }
 
 .ant-btn-primary {
-  position: absolute;
-  right: 0;
+  float: right;
   background-color: var(--darkGreen);
   border-color: var(--darkGreen);
+  margin: 0 0 0 20px;
 }
 
 .ant-btn-primary:hover, .ant-btn-primary:focus {
@@ -100,7 +100,12 @@ a:hover, a:active {
   line-height: 2;
 }
 
-.ant-tabs-tab:active, .ant-tabs-tab-active {
+.ant-tabs-nav .ant-tabs-tab-active {
+  text-decoration-color: var(--darkGreen);
+  font-weight: 600;
+}
+
+.ant-tabs-nav .ant-tabs-tab:hover {
   text-decoration-color: var(--darkGreen);
   font-weight: 600;
 }
