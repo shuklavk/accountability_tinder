@@ -1,10 +1,10 @@
 var express = require('express');
 const expressGraphQL = require('express-graphql');
+const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 const schema = require('./schema/schema');
-var app = express();
-const mongoose = require('mongoose');
 const {MONGOURI} = require('./keys');
+var app = express();
 
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGOURI);

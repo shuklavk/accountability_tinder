@@ -29,15 +29,19 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true
+    },
+    likedProfiles: {
+        type: Array,
+        required: true
     }
 });
 
+const User = mongoose.model('user', userSchema);
+// var fluffy = new User({username:'user2', password: 'pass2', description:'boii2', time_zone:'time2', email:'b@c.com'});
 
-const User = mongoose.model("user", userSchema);
+// fluffy.save(function (err, fluffy) {
+//     if (err) return console.error(err);
+//     console.log('saved! ', fluffy);
+//   });
 
-var fluffy = new User({username:'user1', password: 'pass1', description:'boii', time_zone:'time1', email:'a@b.com'});
-
-fluffy.save(function (err, fluffy) {
-    if (err) return console.error(err);
-    console.log('saved! ', fluffy);
-  });
+module.exports = User;

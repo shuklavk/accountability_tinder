@@ -7,7 +7,7 @@ const {
   GraphQLObjectType
 } = graphql;
 
-// const User = mongoose.model("user");
+const User = require('../../models/user');
 
 const UserType = new GraphQLObjectType({
   name: 'UserType',
@@ -16,7 +16,7 @@ const UserType = new GraphQLObjectType({
     username: {type:GraphQLString},
     password: {type: GraphQLString},
     description: {type:GraphQLString},
-    timezone: {type:GraphQLString},
+    time_zone: {type:GraphQLString},
     email: {type:GraphQLString}
   })
 })
