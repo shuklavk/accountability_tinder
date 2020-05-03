@@ -6,6 +6,7 @@ import MatchImg from '../../../dist/assests/match.png';
 import LogoImg from '../../../dist/assests/logo.png';
 import CodeImage from '../../../dist/assests/coding.png';
 import YesIcon from "../../../dist/assests/tick.png";
+import NoIcon from "../../../dist/assests/no.png";
 
 
 
@@ -45,13 +46,12 @@ class Match extends Component {
                         }
                         actions={[
                             <Button type="primary" shape="circle"  size="small" style={{background:"none", border:"none"}} ><img src={YesIcon}/></Button>,
-                            <Button type="primary" shape="circle"  size="small" style={{background:"none", border:"none"}} ><img src={YesIcon}/></Button>
+                            <Button type="primary" shape="circle"  size="small" style={{background:"none", border:"none"}} ><img src={No}/></Button>
                         ]}
                     >
                         <Meta
                         avatar={<Avatar src="https://img.icons8.com/bubbles/50/000000/user.png"/>}
-                        title="Hackathon Goal"
-                        description="I just want everything to work"
+                        title="Hackathon Goal" 
                         />
                     </Card>
                 </div>

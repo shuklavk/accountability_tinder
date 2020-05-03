@@ -22,6 +22,7 @@ class App extends React.Component {
       <div>
         <Route path="/" component={Match} />
         <Route path="/home" component={Home} />
+        <Route path="/match" component={Match} />
       </div>
     </Router>)
   }
