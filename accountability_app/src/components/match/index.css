@@ -1,0 +1,11 @@
+.ant-btn-primary {
+  float: right;
+  margin: 0 0 0 20px;
+  background:"none";
+  border: "none"
+}
+
+img {
+    align-self: center;
+    flex: auto;
+}

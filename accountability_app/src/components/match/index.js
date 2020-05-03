@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import 'antd/dist/antd.css';
+import './index.css';
 
 //import assets
 import MatchImg from '../../../dist/assests/match.png';
@@ -13,7 +14,6 @@ import NoIcon from "../../../dist/assests/no.png";
 //import UI components
 import {Card, Avatar, Button} from 'antd';
 const { Meta } = Card;
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 
 class Match extends Component {
   constructor(props) {
@@ -36,7 +36,7 @@ class Match extends Component {
                         headStyle={{fontSize:"3vh"}}
                         bodyStyle={{fontSize:"1.5vh"}}
                         bordered="true"
-                        style={{ width: "300px", height: "400px" , backgroundColor:"#a0edec", fontFamily:"Lato", fontSize:"3vh",listStyleType:"none"}}
+                        style={{ width: "300px", height: "500px" , backgroundColor:"#a0edec", fontFamily:"Lato", fontSize:"3vh",listStyleType:"none"}}
                         cover={
                         <img
                             alt="example"
@@ -45,13 +45,14 @@ class Match extends Component {
                         />
                         }
                         actions={[
-                            <Button type="primary" shape="circle"  size="small" style={{background:"none", border:"none"}} ><img src={YesIcon}/></Button>,
-                            <Button type="primary" shape="circle"  size="small" style={{background:"none", border:"none"}} ><img src={No}/></Button>
+                            <Button type="primary" shape="circle" size="small"><img src={YesIcon}/></Button>,
+                            <Button type="primary" shape="circle" size="small"><img src={NoIcon}/></Button>
                         ]}
                     >
                         <Meta
                         avatar={<Avatar src="https://img.icons8.com/bubbles/50/000000/user.png"/>}
                         title="Hackathon Goal" 
+                        alt="I just want everything to work!"
                         />
                     </Card>
                 </div>
