@@ -39,6 +39,14 @@ const userSchema = new mongoose.Schema({
     likedProfiles: {
         type: Array,
         required: true
+    },
+    goals : {
+        type: String,
+        required: true
+    },
+    name:{
+        type:String,
+        required:true
     }
 });
 

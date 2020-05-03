@@ -1,29 +1,21 @@
 import React from 'react';
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route, hashHistory } from 'react-router-dom';
 
 // import List from './components/List.jsx';
 import Home from './home/index'
 import Login from './login/index'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-      items: []
-    }
-  }
-
-  componentDidMount() {
-  }
-
-  render () {
-    return (<Router>
+const App = () => {
+  return (
+    <Router history={hashHistory}>
       <div>
-        <Route path="/" component={Login} />
-        <Route path="/home" component={Home} />
+        <Switch>
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/" component={Home} />
+        </Switch>
       </div>
-    </Router>)
-  }
-}
+    </Router>
+  );
+};
 
-export default App;
+export default App; 

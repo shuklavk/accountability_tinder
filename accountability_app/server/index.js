@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 const schema = require('./schema/schema');
 const {MONGOURI} = require('./keys');
 const passport = require('./google-auth');
+var history = require('connect-history-api-fallback');
 
 // Create User from userSchema
 require("../models/user");
@@ -30,6 +31,7 @@ app.use('/graphql', expressGraphQL({
   schema,
   graphiql: true
 }));
+app.use(history());
 
 // GET /auth/google
 app.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login'] }));
@@ -39,6 +41,8 @@ app.get('/auth/google/callback', passport.authenticate('google', { failureRedire
   function(req, res) {
     res.redirect('/');
 });
+
+app.use(express.static(__dirname + '/../dist'));
 
 app.listen(3000, function() {
   console.log('listening on port 3000!');

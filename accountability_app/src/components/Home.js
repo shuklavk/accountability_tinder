@@ -9,7 +9,7 @@ const Home = () => {
       <p>Hello World of React and Webpack!</p>
       <a href="/auth/google">Sign Up/In with Google</a>
       <p>
-        <Link to="/dynamic">Navigate to Dynamic Page</Link>
+        <Link to="/login">Navigate to Dynamic Page</Link>
       </p>
     </Layout>
   );

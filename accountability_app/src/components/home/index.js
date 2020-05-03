@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import 'antd/dist/antd.css';
+// import '../../css/App.css'
+// import '../../css/style.css'
 //import assets
 import HomeImg from '../../../dist/assests/home.png';
 import LogoImg from '../../../dist/assests/logo.png';
