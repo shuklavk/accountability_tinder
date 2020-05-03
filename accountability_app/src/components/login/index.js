@@ -15,7 +15,7 @@ class Login extends Component {
   } 
     render() {
         return (
-         <div>
+         <div style={{margin:"2%"}}>
             <div style={{width:"35%"}} ><div>
               <div><img src={LogoImg} alt="logo" width="75%"/></div>
             </div>

@@ -9,15 +9,6 @@
   --gray: #999;
 }
 
-html, body {
-  width: 100% !important;
-  height: 70% !important;
-  margin-top: 100px;
-  background-color: var(--light);
-  color: var(--dark);
-  --antd-wave-shadow-color: var(--medGreen);
-}
-
 .Registration {
   margin: 20px 30vw 100px 30vw;
   position: relative;
