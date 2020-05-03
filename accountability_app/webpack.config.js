@@ -54,6 +54,7 @@ module.exports = {
 
       // First Rule
       {
+<<<<<<< HEAD
         test: /\.(js)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
@@ -76,6 +77,34 @@ module.exports = {
           }
         ]
       }
+=======
+        test : /\.jsx?/,
+        include : SRC_DIR,
+        loader : 'babel-loader',      
+        query: {
+          presets: ['react', 'es2015']
+       }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
+        ],
+      },
+      {
+                 test: /\.(png|svg|jpg|gif)$/,
+                 use: [
+                   'file-loader',
+                 ],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+                 use: [
+                  'file-loader',
+                 ],
+      },
+>>>>>>> front-end
     ]
   },
   plugins: [
