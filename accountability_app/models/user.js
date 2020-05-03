@@ -34,10 +34,20 @@ const userSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        required: true,
-        unique: FORTESTING
+        required: true
+    },
+    likedProfiles: {
+        type: Array,
+        required: true
     }
 });
 
+const User = mongoose.model('user', userSchema);
+// var fluffy = new User({username:'user2', password: 'pass2', description:'boii2', time_zone:'time2', email:'b@c.com'});
 
-mongoose.model('User', userSchema);
+// fluffy.save(function (err, fluffy) {
+//     if (err) return console.error(err);
+//     console.log('saved! ', fluffy);
+//   });
+
+module.exports = User;

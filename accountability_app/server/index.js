@@ -1,15 +1,15 @@
 var express = require('express');
 const expressGraphQL = require('express-graphql');
+const mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 const schema = require('./schema/schema');
-var app = express();
-const mongoose = require('mongoose');
 const {MONGOURI} = require('./keys');
 const passport = require('./google-auth');
 
 // Create User from userSchema
 require("../models/user");
-const User = mongoose.model("User");
+const User = mongoose.model("user");
+var app = express();
 
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGOURI);
