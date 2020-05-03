@@ -16,7 +16,10 @@ db.once('open', () => {
   console.log('Connection to MongoDB established');
 });
 
-app.use(express.static(__dirname + '/../react-client/dist'));
+console.log(__dirname + '/../dist')
+
+// app.use(express.static(__dirname + '/../react-client/dist'));
+app.use(express.static(__dirname + '/../dist'));
 
 
 app.listen(3000, function() {
