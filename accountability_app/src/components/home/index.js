@@ -30,7 +30,9 @@ class Home extends Component {
             Sign up to find your accountability buddy. Find people who share the same goals and reach new heights together. It only takes a few minutes!
                 </div>
           <div style={{ marginRight: "5%" }}>
+          <Link to="/signup">
             <Button type="primary" shape="round" size="large" style={{ backgroundColor: "#0d847e", height: "7.5vh", width: "15vh", border: "none" }}> Sign Up </Button>
+          </Link>
             <Link to="/login">
               <Button type="primary" shape="round" size="large" style={{ backgroundColor: "#0e9e9b", height: "7.5vh", width: "15vh", marginLeft: "2%", border: "none" }}> Login </Button>
             </Link>

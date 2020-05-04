@@ -24,10 +24,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    goals: {
-        type: Array,
-        required: false
-    },
     time_zone: {
         type: String,
         required: true
@@ -40,7 +36,7 @@ const userSchema = new mongoose.Schema({
         type: Array,
         required: true
     },
-    goals : {
+    goal : {
         type: String,
         required: true
     },

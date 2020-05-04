@@ -17,7 +17,10 @@ const UserType = new GraphQLObjectType({
     password: {type: GraphQLString},
     description: {type:GraphQLString},
     time_zone: {type:GraphQLString},
-    email: {type:GraphQLString}
+    email: {type:GraphQLString},
+    goal: {type:GraphQLString},
+    name: {type:GraphQLString},
+    likedProfiles: {type:GraphQLList(UserType)}
   })
 })
 
